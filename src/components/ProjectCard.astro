@@ -1,7 +1,35 @@
 ---
+import { Icon } from "astro-icon/components"
 
+import type { Project } from "@interfaces/interfaces.ts"
+
+interface Props {
+    project: Project
+}
+
+const { project } = Astro.props
 ---
 
-<div>
-    <h1>Project Card</h1>
+<div class="card flex flex-col justify-between items-start bg-blue-900 text-white rounded-md lg:h-[500px] max-w-[324px] opacity-0 translate-y-20 duration-[1.5s] ease-out">
+    <img src={project.img.src} alt="Portada del proyecto.">
+    <h1 class="lg:ml-2">{project.name}</h1>
+    <p class="flex items-start w-full">
+        { project.technologies.map((technology) => (
+            <span class="bg-blue-500 text-sm rounded-full mx-1 px-3">
+                {technology}
+            </span>
+        )) }
+    </p>
+    <p class="w-full text-justify px-4">{project.description}</p>
+    <div class="flex justify-end w-full mb-2">
+        <a
+            class="flex justify-evenly items-center w-40 h-9 bg-green-600 hover:bg-green-700 dark:bg-gray-600  dark:hover:bg-gray-700 rounded-full  mr-2"
+            type="button"
+            target="_blank"
+            href={project.href}
+        >
+            Ver proyecto
+            <Icon name="arrow-right" size={20} />
+        </a>
+    </div>
 </div>

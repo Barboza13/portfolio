@@ -5,7 +5,9 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@sections/*": ["src/sections/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@images/*": ["src/images/*"],
+      "@interfaces/*": ["src/interfaces/*"]
     }
   }
 }
