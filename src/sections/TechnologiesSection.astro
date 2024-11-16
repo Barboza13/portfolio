@@ -1,7 +1,63 @@
 ---
 import TechnologyCard from "@components/TechnologyCard.astro"
+
+import type { Technology } from "@interfaces/interfaces.ts"
+
+import diplomaLaravel from "@pdfs/diploma-Laravel.pdf"
+import diplomaVue from "@pdfs/diploma-vue.pdf"
+
+const technologies: Technology[] = [
+    {
+        name: "Javascript",
+        icon: "tech-javascript",
+        href: ""
+    },
+    {
+        name: "Typescript",
+        icon: "tech-typescript",
+        href: ""
+    },
+    {
+        name: "Vue.js",
+        icon: "tech-vue",
+        href: diplomaVue
+    },
+    {
+        name: "HTML",
+        icon: "tech-html",
+        href: ""
+    },
+    {
+        name: "CSS",
+        icon: "tech-css",
+        href: ""
+    },
+    {
+        name: "Tailwindcss",
+        icon: "tech-tailwind",
+        href: ""
+    },
+    {
+        name: "Bootstrap",
+        icon: "tech-bootstrap",
+        href: ""
+    },
+    {
+        name: "PHP",
+        icon: "tech-php",
+        href: ""
+    },
+    {
+        name: "Laravel",
+        icon: "tech-laravel",
+        href: diplomaLaravel
+    },
+]
 ---
 
 <section class="flex flex-col justify-center items-center lg:min-h-screen" id="technologies">
-    <h1>Tecnologias</h1>
+    <h1 class="text-3xl text-white my-5">Tecnologias</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-full place-content-center gap-2 lg:px-10">
+        { technologies.map((technology) => (<TechnologyCard technology={technology} />)) }
+    </div>
 </section>

@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components"
+
+import type { Technology } from "@interfaces/interfaces.ts"
+
+interface Props {
+  technology: Technology
+}
+
+const { technology } = Astro.props
+---
+
+<div class="card flex flex-col bg-blue-900 text-white rounded-md border border-transparent hover:border-white translate-y-20 opacity-0 duration-[2.5s] transition-transform ease-out">
+  <Icon class="" name={technology.icon} size={50} />
+  <h1>{technology.name}</h1>
+  <div class="flex justify-end w-full mb-2">
+    <a
+      class="flex justify-center items-center bg-green-600 dark:bg-gray-600 dark:hover:bg-gray-700 rounded-full w-36 mr-2"
+      target="_blank"
+      href={technology.href.toString()}
+    >
+      Ver certificacion
+    </a>
+  </div>
+</div>

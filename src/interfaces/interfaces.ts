@@ -5,3 +5,9 @@ export interface Project {
   technologies: string[]
   href: string
 }
+
+export interface Technology {
+  name: string
+  icon: string
+  href: ImageMetadata | string
+}
