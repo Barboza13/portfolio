@@ -55,7 +55,10 @@ const technologies: Technology[] = [
 ]
 ---
 
-<section class="flex flex-col justify-center items-center lg:min-h-screen" id="technologies">
+<section
+    class="flex flex-col justify-center items-center lg:min-h-screen border-b-[1px] border-gray-600"
+    id="technologies"
+>
     <h1 class="text-3xl text-white my-5">Tecnologias</h1>
     <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-full place-content-center gap-2 lg:px-10">
         { technologies.map((technology) => (<TechnologyCard technology={technology} />)) }
