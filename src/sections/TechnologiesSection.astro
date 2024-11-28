@@ -57,15 +57,20 @@ const technologies: Technology[] = [
         icon: "tech-mysql",
         href: "#"
     },
+    {
+        name: "Git",
+        icon: "tech-git",
+        href: "#"
+    },
 ]
 ---
 
 <section
-    class="flex flex-col justify-center items-center lg:h-screen dark:border-b-[1px] dark:border-gray-600"
+    class="flex flex-col justify-center items-center lg:h-screen"
     id="technologies"
 >
     <h1 class="text-3xl text-white my-5">Tecnologias</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-full place-content-center gap-2 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-full place-content-center gap-4 px-20">
         { technologies.map((technology) => (<TechnologyCard technology={technology} />)) }
     </div>
 </section>
