@@ -10,9 +10,9 @@ interface Props {
 const { technology } = Astro.props
 ---
 
-<div class="card flex justify-start items-center w-72 h-20 bg-blue-900 text-white rounded-md border border-transparent hover:border-white translate-y-20 opacity-0 duration-[1s] transition-transform ease-out">
+<div class="card flex justify-start items-center w-72 h-20 group bg-blue-900 text-white rounded-md border border-transparent hover:border-white z-[100] translate-y-20 opacity-0 duration-[1s] transition-transform ease-out">
 	<div class="flex flex-col justify-center items-center ml-2">
-		<Icon name={technology.icon} size={40} />
+		<Icon class="group-hover:-rotate-12 transition-transform" name={technology.icon} size={40} />
 	  	<h1>{technology.name}</h1>
 	</div>
   	<div class="flex justify-end items-end w-full h-full mb-2">
