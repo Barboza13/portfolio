@@ -1,10 +1,31 @@
 ---
+import { Icon } from "astro-icon/components"
+
+interface SocialMedia {
+    name: string,
+    href: string
+}
+
+const socialMedia: SocialMedia[] = [
+    { name: "instagram-footer-1", href: "" },
+    { name: "github-footer-1", href: "https://github.com/Barboza13" }
+]
+
 const year: number = new Date().getFullYear()
+
+
 ---
 
-<footer class="flex flex-col justify-between items-center w-full h-[200px] bg-background-dark dark:bg-blue-900 text-gray-600 dark:text-white">
-  <section class="w-[99%] border-b-[1px] dark:border-white border-gray-600 my-5">
+<footer class="flex flex-col justify-between items-center w-full h-[200px] bg-background-dark dark:bg-blue-900 text-gray-600 dark:text-white px-10">
+  <section class="w-[99%] border-b-[1px] dark:border-white border-gray-600 mt-5">
     <h1 class="">Todo este portafolio esta hecho con Astro.js :)</h1>
+  </section>
+  <section class="flex justify-start items-center w-full gap-2">
+    { socialMedia.map(({name, href}) => (
+        <a href={href}>
+          <Icon name={name} size={30} />
+        </a>
+    )) }
   </section>
   <section class="flex w-full pl-2">
     <ul class="flex flex-col lg:flex-row justify-start items-center w-full gap-2">
