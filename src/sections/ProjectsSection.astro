@@ -34,7 +34,7 @@ const projects: Project[] = [
     id="projects"
 >
     <h1 class="text-3xl text-white my-5">Proyectos</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full w-full place-content-center lg:px-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full w-full place-content-center gap-4 px-11 pb-5 lg:px-32">
         { projects.map((project) => (<ProjectCard project={project} />)) }
     </div>
 </section>

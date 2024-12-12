@@ -71,11 +71,11 @@ const technologies: Technology[] = [
 ---
 
 <section
-    class="flex flex-col justify-center items-center lg:h-screen"
+    class="flex flex-col justify-center items-center lg:h-screen pb-5"
     id="technologies"
 >
     <h1 class="text-3xl text-white my-5">Tecnologias</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-full place-content-center gap-4 px-20">
+    <div class="grid grid-cols-2 lg:grid-cols-4 w-full h-full place-content-center gap-4 px-4 lg:px-10">
         { technologies.map((technology) => (<TechnologyCard technology={technology} />)) }
     </div>
 </section>
