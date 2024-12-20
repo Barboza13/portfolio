@@ -10,13 +10,15 @@ interface Props {
 const { technology } = Astro.props
 ---
 
-<div class="card flex flex-col lg:flex-row justify-center lg:justify-start items-center w-44 h-28 lg:w-72 lg:h-20 group bg-blue-900 text-white rounded-md border border-transparent hover:border-white z-[100] translate-y-20 opacity-0 duration-[1s] transition-transform ease-out">
+<div class="card flex flex-col lg:flex-row justify-center lg:justify-start items-center w-44 h-36 lg:w-72 lg:h-20 group bg-blue-900 text-white rounded-md border border-transparent hover:border-white z-[100] translate-y-20 opacity-0 duration-[1s] transition-transform ease-out">
 	<div class="flex flex-col justify-center items-center ml-2">
 		<Icon class="group-hover:-rotate-12 transition-transform" name={technology.icon} size={40} />
 	  	<h1 class="text-xl">{technology.name}</h1>
 	</div>
-	{ technology.href !== "#" ? (
-			<div class="flex justify-end items-end w-full h-full mb-2">
+	<div class="flex flex-col justify-evenly items-center w-full h-full">
+	<h1 class="text-xl lg:text-md">{technology.level}</h1>
+	<div class="flex justify-end items-center w-full">
+		{ technology.href !== "#" ? (
 			<a
 		  		class="flex justify-evenly items-center w-40 h-7 bg-green-600 dark:bg-gray-600 dark:hover:bg-gray-700 rounded-full mr-2"
 		  		target="_blank"
@@ -25,6 +27,7 @@ const { technology } = Astro.props
 		  		Ver certificacion
 				<Icon name="arrow-open" size={20}/>
 			</a>
-  			</div>
 		) : null }
+		</div>
+	</div>
 </div>

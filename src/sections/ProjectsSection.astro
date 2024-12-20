@@ -1,6 +1,7 @@
 ---
 import ProjectCard from "@components/ProjectCard.astro"
 import ucaFrontPage from "@images/UCA_app_web.png"
+import personalFinanceFrontPage from "@images/personal_finance_web.png"
 
 import type { Project } from "@interfaces/interfaces.ts"
 
@@ -8,16 +9,16 @@ const projects: Project[] = [
     {
         img: ucaFrontPage,
         name: "Aplicacion Web",
-        description: "Una aplicación web para la Universidad Católica 'Nuestra Señora de la Asunción'. Estuve a cargo del desarrollo del Backend con Laravel y MySQL, realice los CRUDs pertinentes para cada sección, implemente un sistema de cambio de contraseña mediante mails. También contribuí en el Frontend con diseños de Bootstrap.",
+        description: "Una aplicación web para la Universidad Católica 'Nuestra Señora de la Asunción'. Estuve a cargo del desarrollo del Backend con Laravel y MySQL, realice los CRUDs pertinentes para cada sección, implemente un sistema de cambio de contraseña mediante emails. También contribuí en el Frontend con diseños de Bootstrap.",
         technologies: ["Laravel", "Bootstrap", "MySQL"],
         href: "https://www.upsanignacio.edu.py/"
     },
     {
-        img: ucaFrontPage,
-        name: "Aplicacion web UCA UP San Ignacio Guazu",
-        description: "Pagina web UCA",
-        technologies: ["Laravel", "Bootstrap", "MySQL"],
-        href: "https://www.upsanignacio.edu.py/"
+        img: personalFinanceFrontPage,
+        name: "Aplicacion Web",
+        description: "Una aplicacion web para control de ingresos y egresos personales. Cuenta con integracion de graficos para el seguimiento de las finanzas personales. Todos los datos de guardan en el localStorage.",
+        technologies: ["Vue.js", "Typescript", "Tailwindcss"],
+        href: "https://personal-finance-beta.vercel.app/"
     },
     {
         img: ucaFrontPage,

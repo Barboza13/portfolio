@@ -6,8 +6,9 @@ export interface Project {
   href: string
 }
 
-export interface Technology {
+export type Technology = {
   name: string
+  level: 'Principiante' | 'Intermedio' | 'Avanzado'
   icon: string
   href: ImageMetadata | string
 }
