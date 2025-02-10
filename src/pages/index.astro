@@ -19,5 +19,5 @@ import TechnologiesSection from "@sections/TechnologiesSection.astro"
 	observeCards()
 	mouseTracker()
 	
-	updateFavicon()
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon)
 </script>

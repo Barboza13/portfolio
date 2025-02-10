@@ -2,6 +2,7 @@
 import ProjectCard from "@components/ProjectCard.astro"
 import ucaFrontPage from "@images/UCA_app_web.png"
 import personalFinanceFrontPage from "@images/personal_finance_web.png"
+import weatherWebAppFrontPage from "@images/weather_web_app.png"
 
 import type { Project } from "@interfaces/interfaces.ts"
 
@@ -23,12 +24,12 @@ const projects: Project[] = [
         gitHub: "https://github.com/Barboza13/personal-finance"
     },
     {
-        img: ucaFrontPage,
-        name: "Aplicacion web UCA UP San Ignacio Guazu",
-        description: "Pagina web UCA",
-        technologies: ["Laravel", "Bootstrap", "MySQL"],
-        href: "https://www.upsanignacio.edu.py/",
-        gitHub: "#"
+        img: weatherWebAppFrontPage,
+        name: "Aplicacion Web",
+        description: 'Una aplicacion web para mostrar el estado del clima en diferentes partes del mundo. Consumo y procesamiento de los datos de la API "Visual Crossing Weather API".',
+        technologies: ["Vue.js", "Typescript", "Tailwindcss"],
+        href: "https://weather-web-app-delta-five.vercel.app/",
+        gitHub: "https://github.com/Barboza13/weather-web-app"
     },
 ]
 ---

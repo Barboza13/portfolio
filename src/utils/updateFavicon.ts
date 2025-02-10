@@ -13,8 +13,4 @@ const updateFavicon = (): void => {
   )
 }
 
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', updateFavicon)
-
 export default updateFavicon
