@@ -9,7 +9,7 @@ import type { Project } from "@interfaces/interfaces.ts"
 const projects: Project[] = [
     {
         img: ucaFrontPage,
-        name: "Aplicacion Web",
+        name: "Pagina Web / Aplicacion Web",
         description: "Una aplicación web para la Universidad Católica 'Nuestra Señora de la Asunción'. Estuve a cargo del desarrollo del Backend con Laravel y MySQL, realice los CRUDs pertinentes para cada sección, implemente un sistema de cambio de contraseña mediante emails. También contribuí en el Frontend con diseños de Bootstrap.",
         technologies: ["Laravel", "Bootstrap", "MySQL"],
         href: "https://www.upsanignacio.edu.py/",
@@ -39,7 +39,7 @@ const projects: Project[] = [
     id="projects"
 >
     <h1 class="text-3xl text-white my-5">Proyectos</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full w-full place-content-center gap-4 px-11 pb-5 lg:px-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full w-full place-content-center place-items-center gap-4 px-11 pb-5">
         { projects.map((project) => (<ProjectCard project={project} />)) }
     </div>
 </section>
