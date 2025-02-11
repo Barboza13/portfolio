@@ -7,7 +7,7 @@ interface SocialMedia {
 }
 
 const socialMedia: SocialMedia[] = [
-    { name: "instagram", href: "" },
+    { name: "instagram", href: "https://www.instagram.com/carlosbarboza39" },
     { name: "github", href: "https://github.com/Barboza13" },
     { name: "linkedin", href: "https://www.linkedin.com/in/carlos-barboza-274144209/" }
 ]
@@ -40,7 +40,7 @@ const socialMedia: SocialMedia[] = [
 
     <div>
         <div class="relative h-12 overflow-hidden flex items-center justify-start">
-            <span id="animated-text" class="absolute text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text animate-[gradient-move_3s_linear_infinite] transition-transform duration-500 opacity-100 text-5xl mb-3">
+            <span id="animated-text" class="absolute text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text animate-[gradient-move_3s_linear_infinite] transition-all duration-500 text-5xl mb-3">
             </span>
         </div>
         <p class="text-white">
@@ -58,6 +58,7 @@ const socialMedia: SocialMedia[] = [
     const animatedText = document.getElementById("animated-text")
 
     const changeText = (): void => {
+        animatedText?.classList.remove("opacity-100", "translate-y-0")
         animatedText?.classList.add("opacity-0", "-translate-y-full")
 
         setTimeout(() => {
