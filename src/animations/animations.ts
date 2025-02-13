@@ -15,26 +15,54 @@ export const observeCards = (): void => {
 }
 
 export const mouseTracker = (): void => {
-  const shadow = document.createElement('div')
-  shadow.classList.add(
-    'fixed',
-    'w-[30px]',
-    'h-[30px]',
-    'rounded-full',
-    'z-[1]',
-    'top-0',
-    'left-0'
-  )
+  const trailCount = 20
+  const trails: HTMLDivElement[] = []
 
-  shadow.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
-  shadow.style.pointerEvents = 'none'
-  shadow.style.transform = 'translate(0, 0)'
-  shadow.style.transition = 'transform .1s ease'
-  shadow.style.boxShadow = '0px 4px 20px rgba(0, 0, 0, 1)'
-  document.body.appendChild(shadow)
+  for (let i = 0; i < trailCount; i++) {
+    const shadow = document.createElement('div')
+    shadow.classList.add(
+      'fixed',
+      'w-[15px]',
+      'h-[15px]',
+      'z-[1]',
+      'top-0',
+      'left-0'
+    )
+
+    shadow.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'
+    shadow.style.pointerEvents = 'none'
+    shadow.style.position = 'absolute'
+    shadow.style.transition = 'transform 0.1s linear'
+    shadow.style.boxShadow = '0px 4px 20px rgba(0, 0, 0, 1)'
+
+    document.body.appendChild(shadow)
+    trails.push(shadow)
+  }
+
+  let mouseX = 0,
+    mouseY = 0
+  const positions: { x: number; y: number }[] = Array(trailCount).fill({
+    x: 0,
+    y: 0,
+  })
 
   document.addEventListener('mousemove', (event: MouseEvent) => {
-    const { clientX, clientY } = event
-    shadow.style.transform = `translate(${clientX}px, ${clientY}px)`
+    mouseX = event.pageX
+    mouseY = event.pageY
   })
+
+  function animate() {
+    positions.pop()
+    positions.unshift({ x: mouseX, y: mouseY })
+
+    trails.forEach((trail, index) => {
+      const { x, y } = positions[index]
+      trail.style.transform = `translate(${x}px, ${y}px)`
+      trail.style.opacity = `${1 - index / trailCount}`
+    })
+
+    requestAnimationFrame(animate)
+  }
+
+  animate()
 }
