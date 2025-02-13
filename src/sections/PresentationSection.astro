@@ -14,7 +14,7 @@ const socialMedia: SocialMedia[] = [
 ---
 
 <section 
-    class="flex flex-col justify-center items-start w-full lg:h-screen border-b-[1px] border-white dark:border-gray-600 px-10 pb-5"
+    class="flex flex-col justify-center items-start w-full lg:h-screen border-b-[1px] border-white dark:border-gray-600 pt-20 lg:pt-0 px-10 pb-5"
     id="presentation"
 >
 
@@ -40,7 +40,7 @@ const socialMedia: SocialMedia[] = [
 
     <div>
         <div class="relative h-12 overflow-hidden flex items-center justify-start">
-            <span id="animated-text" class="absolute text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text animate-[gradient-move_3s_linear_infinite] transition-all duration-500 text-5xl mb-3">
+            <span id="animated-text" class="absolute text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text animate-[gradient-move_3s_linear_infinite] transition-all duration-500 text-4xl lg:text-5xl mb-3">
             </span>
         </div>
         <p class="text-white">
@@ -50,10 +50,19 @@ const socialMedia: SocialMedia[] = [
             Me gusta buscar soluciones tecnologicas aplicando la programacion a los problemas cotidianos.
         </p>
     </div>
+    <img src="./src/images/code-image.png" class="absolute top-0 left-0 w-[300px] h-[700px] lg:w-full lg:h-full rounded-xl z-[-1]" id="code-image">
 </section>
 
+<style>
+    #code-image {
+        object-fit: cover;
+        transform: perspective(4000px) rotateY(20deg) rotateX(30deg);
+        filter: drop-shadow(5px 5px 20px rgb(0, 0, 0, .5));
+    }
+</style>
+
 <script>
-    const texts = ["Desarrollador Web", "Freelancer"]
+    const texts = ["Web Developer", "Freelancer"]
     let currentIndex = 0
     const animatedText = document.getElementById("animated-text")
 
