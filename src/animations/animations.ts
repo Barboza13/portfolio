@@ -24,7 +24,7 @@ export const mouseTracker = (): void => {
       'fixed',
       'w-[15px]',
       'h-[15px]',
-      'z-[1]',
+      'z-[-1]',
       'top-0',
       'left-0'
     )
