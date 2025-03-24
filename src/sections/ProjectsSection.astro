@@ -3,6 +3,7 @@ import ProjectCard from "@components/ProjectCard.astro"
 import ucaFrontPage from "@images/UCA_app_web.png"
 import personalFinanceFrontPage from "@images/personal_finance_web.png"
 import weatherWebAppFrontPage from "@images/weather_web_app.png"
+import devTaskFrontPage from "@images/dev_task_web.png"
 
 import type { Project } from "@interfaces/interfaces.ts"
 
@@ -31,11 +32,19 @@ const projects: Project[] = [
         href: "https://weather-web-app-delta-five.vercel.app/",
         gitHub: "https://github.com/Barboza13/weather-web-app"
     },
+    {
+        img: devTaskFrontPage,
+        name: "Aplicacion Web",
+        description: "Una aplicacion web para gestionar las tareas de proyectos.",
+        technologies: ["Vue.js", "Typescript", "Tailwindcss", "Laravel", "MySQL"],
+        href: "https://devtask.laravel.cloud/",
+        gitHub: "https://github.com/Barboza13/DevTask"
+    }
 ]
 ---
 
 <section
-    class="flex flex-col justify-start items-center lg:h-[800px] border-b-[1px] border-white dark:border-gray-600"
+    class="flex flex-col justify-start items-center border-b-[1px] border-white dark:border-gray-600"
     id="projects"
 >
     <h1 class="text-3xl text-white my-5">Proyectos</h1>
