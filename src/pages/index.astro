@@ -14,12 +14,9 @@ import TechnologiesSection from "@sections/TechnologiesSection.astro"
 
 <script>
 	import { observeCards, mouseTracker } from "@animations/animations.ts"
-	import updateFavicon from "@utils/updateFavicon.ts"
 
 	observeCards()
-	mouseTracker()
-	
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon)
+	mouseTracker()	
 </script>
 
 <style>

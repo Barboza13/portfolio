@@ -1,22 +1,17 @@
 /**
- * @description Update favicon based on the user's color scheme preference.
+ * @description Update favicon based on the dark mode.
  * @returns {void}
  */
-const updateFavicon = (): void => {
+export default function updateFavicon(): void {
   const favicon = document.querySelector('link[rel="icon"]')
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 
   if (!favicon) return
-
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 
   favicon.setAttribute(
     'href',
     isDarkMode
-      ? 'src/icons/portfolio-dark-icon.svg'
-      : 'src/icons/portfolio-light-icon.svg'
+      ? '/icons/portfolio-dark-icon.svg'
+      : '/icons/portfolio-light-icon.svg'
   )
-
-  console.log('changed favicon!')
 }
-
-export default updateFavicon
