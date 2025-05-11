@@ -15,19 +15,12 @@ export const observeCards = (): void => {
 }
 
 export const mouseTracker = (): void => {
-  const trailCount = 20
+  const trailCount = 50
   const trails: HTMLDivElement[] = []
 
   for (let i = 0; i < trailCount; i++) {
     const shadow = document.createElement('div')
-    shadow.classList.add(
-      'fixed',
-      'w-[15px]',
-      'h-[15px]',
-      'z-[-1]',
-      'top-0',
-      'left-0'
-    )
+    shadow.classList.add('w-[10px]', 'h-[10px]', 'z-[-1]', 'top-0', 'left-0')
 
     shadow.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'
     shadow.style.pointerEvents = 'none'
