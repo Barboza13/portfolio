@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components"
+import perfil from "@images/perfil.jpg"
 
 interface SocialMedia {
     name: string,
@@ -20,7 +21,7 @@ const socialMedia: SocialMedia[] = [
     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full pb-4">
         <div class="flex flex-col justify-center items-center w-full lg:w-auto z-[100] mb-5">
             <div class="w-64 h-64 border border-white rounded-xl overflow-hidden mb-3">
-                <img src="https://previews.123rf.com/images/kritchanut/kritchanut1405/kritchanut140500070/28162537-hombre-foto-de-perfil-silueta-avatar-en-c%C3%ADrculo-icono-de-vectores.jpg" alt="Imagen mia">
+                <img src={perfil.src} alt="imagen de perfil">
             </div>
             <h1 class="text-3xl text-white">Carlos Barboza</h1>
         </div>
