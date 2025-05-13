@@ -13,7 +13,8 @@ import TechnologiesSection from "@sections/TechnologiesSection.astro"
 </Layout>
 
 <script>
-	import { observeCards, mouseTracker } from "@animations/animations.ts"
+	import observeCards from "@animations/observe_cards.ts"
+	import mouseTracker from "@animations/mouse_tracker"
 
 	observeCards()
 	mouseTracker()	

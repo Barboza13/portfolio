@@ -12,9 +12,17 @@ export default {
       },
       keyframes: {
         'gradient-move': {
-          '0%': { backgroundPosition: '100% 0' },
-          '100%': { backgroundPosition: '0 0' },
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
+      },
+      backgroundSize: {
+        'gradient-move': '200% 200%',
+      },
+      boxShadow: {
+        'presentation-shadow': 'inset 0 0 100px rgba(0, 0, 0, 1)',
+        'profile-shadow': '0 0 15px rgba(255, 255, 255, .5)',
       },
     },
   },
