@@ -9,7 +9,5 @@ export interface Project {
 
 export type Technology = {
   name: string
-  level: 'Principiante' | 'Intermedio' | 'Avanzado'
   icon: string
-  href: ImageMetadata | string
 }

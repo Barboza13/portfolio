@@ -3,103 +3,112 @@ import TechnologyCard from "@components/TechnologyCard.astro"
 
 import type { Technology } from "@interfaces/interfaces.ts"
 
-import diplomaLaravel from "@pdfs/diploma-Laravel.pdf"
-import diplomaVue from "@pdfs/diploma-vue.pdf"
-
 const technologies: Technology[] = [
     {
         name: "HTML",
-        level: "Avanzado",
         icon: "tech-html",
-        href: "#"
     },
     {
         name: "CSS",
-        level: "Avanzado",
         icon: "tech-css",
-        href: "#"
     },
     {
         name: "Javascript",
-        level: "Avanzado",
         icon: "tech-javascript",
-        href: "#"
     },
     {
         name: "Typescript",
-        level: "Intermedio",
         icon: "tech-typescript",
-        href: "#"
     },
     {
         name: "Vue.js",
-        level: "Avanzado",
         icon: "tech-vue",
-        href: diplomaVue
     },
     {
         name: "Astro.js",
-        level: "Principiante",
         icon: "tech-astro",
-        href: "#"
     },
     {
         name: "Tailwindcss",
-        level: "Intermedio",
         icon: "tech-tailwind",
-        href: "#"
     },
     {
         name: "Bootstrap",
-        level: "Intermedio",
         icon: "tech-bootstrap",
-        href: "#"
     },
     {
         name: "PHP",
-        level: "Avanzado",
         icon: "tech-php",
-        href: "#"
     },
     {
         name: "Laravel",
-        level: "Avanzado",
         icon: "tech-laravel",
-        href: diplomaLaravel
     },
     {
         name: "Python",
-        level: "Intermedio",
         icon: "tech-python",
-        href: "#"
     },
     {
         name: "Rust",
-        level: "Principiante",
         icon: "tech-rust",
-        href: "#"
     },
     {
         name: "MySQL",
-        level: "Intermedio",
         icon: "tech-mysql",
-        href: "#"
+    },
+    {
+        name: "PostgreSQL",
+        icon: "tech-postgresql",
     },
     {
         name: "Git",
-        level: "Intermedio",
         icon: "tech-git",
-        href: "#"
     },
 ]
 ---
 
 <section
-    class="flex flex-col justify-center items-center lg:h-screen pb-5"
+    class="flex flex-col justify-center items-center border-b border-gray-600 py-5"
     id="technologies"
 >
-    <h1 class="text-3xl text-white my-5">Tecnologias</h1>
-    <div class="grid grid-cols-2 lg:grid-cols-4 w-full h-full place-content-center gap-4 px-4 lg:px-10">
-        { technologies.map((technology) => (<TechnologyCard technology={technology} />)) }
+    <h1 class="text-3xl text-white">Tecnologías</h1>
+    <div class="flex justify-center items-center h-52 w-full overflow-hidden">
+        <div class="h-full overflow-hidden" id="carousel-wrapper">
+            <div class="flex items-center h-full will-change-transform gap-20" id="carousel-track">
+                {
+                    [...technologies, ...technologies].map((technology, index) => (
+                        <TechnologyCard technology={technology} index={index} />
+                    ))
+                }
+            </div>
+        </div>
     </div>
 </section>
+
+<script>
+function carousel(): void {
+    const carouselTrack = document.getElementById('carousel-track')
+    let translateX = 0
+    const speed = 1
+    
+    if (!carouselTrack) return
+    
+    let resetPoint = carouselTrack.scrollWidth / 2
+
+    function animate(): void {
+        translateX -= speed
+
+        if (Math.abs(translateX) >= resetPoint) {
+            translateX = 0;
+        }
+
+        if (carouselTrack) carouselTrack.style.transform = `translateX(${translateX}px)`;
+
+        requestAnimationFrame(() => animate());
+    }
+
+    animate()
+}
+
+carousel()
+</script>
