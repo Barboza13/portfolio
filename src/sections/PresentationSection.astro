@@ -16,11 +16,11 @@ const socialMedia: SocialMedia[] = [
 ---
 
 <section
-    class="flex flex-col justify-start items-start w-full lg:h-screen border-b-[1px] border-white dark:border-gray-600 shadow-presentation-shadow px-10"
+    class="flex flex-col justify-start items-start w-full lg:h-screen border-b border-white dark:border-gray-600 shadow-presentation-shadow px-10 py-10"
     id="presentation"
 >
     <NavBar />
-    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mt-10">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full">
         <div class="flex flex-col justify-center items-center w-full lg:w-auto z-[100] mb-5">
             <div class="w-64 h-64 border border-white rounded-xl overflow-hidden shadow-profile-shadow mb-3">
                 <img src={perfil.src} alt="imagen de perfil">
@@ -28,12 +28,12 @@ const socialMedia: SocialMedia[] = [
             <h1 class="text-3xl text-white">Carlos Barboza</h1>
         </div>
 
-        <div class="flex flex-col justify-start items-start h-full mr-20">
+        <div class="flex flex-col justify-start items-center h-full w-full lg:w-max mb-3">
             <h1 class="text-xl text-white">Redes Sociales</h1>
             <div class="flex justify-center items-center gap-2">
                 { socialMedia.map(({name, href}) => (
-                    <a class="z-[100]" href={href}>
-                        <Icon class="cursor-pointer" name={name} size={40}/>
+                    <a class="z-[100]" href={href} target="_blank">
+                        <Icon name={name} size={40}/>
                     </a>
                     )) }
             </div>

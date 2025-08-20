@@ -3,31 +3,30 @@ import ProjectCard from "@components/ProjectCard.astro"
 import ucaFrontPage from "@images/UCA_app_web.png"
 import personalFinanceFrontPage from "@images/personal_finance_web.png"
 import weatherWebAppFrontPage from "@images/weather_web_app.png"
-import devTaskFrontPage from "@images/dev_task_web.png"
 
 import type { Project } from "@interfaces/interfaces.ts"
 
 const projects: Project[] = [
     {
         img: ucaFrontPage,
-        name: "Pagina Web / Aplicacion Web",
-        description: "Una aplicación web para la Universidad Católica 'Nuestra Señora de la Asunción'. Estuve a cargo del desarrollo del Backend con Laravel y MySQL, realice los CRUDs pertinentes para cada sección, implemente un sistema de cambio de contraseña mediante emails. También contribuí en el Frontend con diseños de Bootstrap.",
+        name: "Página Web / Aplicación Web",
+        description: "Una página y aplicación web para la Universidad Católica 'Nuestra Señora de la Asunción'. Cuenta con gestión de contenido administrativo y académico.",
         technologies: ["Laravel", "Bootstrap", "MySQL"],
         href: "https://www.upsanignacio.edu.py/",
         gitHub: "#"
     },
     {
         img: personalFinanceFrontPage,
-        name: "Aplicacion Web",
-        description: "Una aplicacion web para control de ingresos y egresos personales. Cuenta con integracion de graficos para el seguimiento de las finanzas personales. Todos los datos de guardan en el localStorage.",
+        name: "Aplicación Web",
+        description: "Una aplicación web para control de ingresos y egresos personales. Cuenta con integración de gráficos para el seguimiento de las finanzas personales.",
         technologies: ["Vue.js", "Typescript", "Tailwindcss"],
         href: "https://personal-finance-beta.vercel.app/",
         gitHub: "https://github.com/Barboza13/personal-finance"
     },
     {
         img: weatherWebAppFrontPage,
-        name: "Aplicacion Web",
-        description: 'Una aplicacion web para mostrar el estado del clima en diferentes partes del mundo. Consumo y procesamiento de los datos de la API "Visual Crossing Weather API".',
+        name: "Aplicación Web",
+        description: 'Una aplicación web para mostrar el estado del clima en diferentes partes del mundo. Consumo y procesamiento de los datos de la API "Visual Crossing Weather API".',
         technologies: ["Vue.js", "Typescript", "Tailwindcss"],
         href: "https://weather-web-app-delta-five.vercel.app/",
         gitHub: "https://github.com/Barboza13/weather-web-app"
@@ -36,7 +35,7 @@ const projects: Project[] = [
 ---
 
 <section
-    class="flex flex-col justify-start items-center border-b-[1px] border-white dark:border-gray-600"
+    class="flex flex-col justify-start items-center"
     id="projects"
 >
     <h1 class="text-3xl text-white my-5">Proyectos</h1>
