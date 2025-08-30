@@ -13,10 +13,10 @@ const { technology, index } = Astro.props
 
 <div class:list={[
 		index % 2 == 0 ? 'animate-float-1' : 'animate-float-2',
-		'flex flex-col lg:flex-row justify-center lg:justify-start items-center w-44 h-full lg:w-72 lg:h-20 text-white rounded-md z-[100]'
+		'flex justify-center items-center h-max w-44 lg:w-72 text-white z-[100]'
 	]}>
-	<div class="flex flex-col justify-center items-center ml-2">
-		<Icon class="group-hover:-rotate-12 transition-transform" name={technology.icon} size={80} />
+	<div class="flex flex-col justify-center items-center">
+		<Icon name={technology.icon} size={80} />
 	  	<h1 class="text-xl">{technology.name}</h1>
 	</div>
 </div>

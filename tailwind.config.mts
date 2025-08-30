@@ -22,7 +22,6 @@ export default {
       },
       boxShadow: {
         'presentation-shadow': 'inset 0 0 100px rgba(0, 0, 0, 1)',
-        'profile-shadow': '0 0 15px rgba(255, 255, 255, .5)',
       },
     },
   },
