@@ -3,6 +3,7 @@ import ProjectCard from "@components/ProjectCard.astro"
 import ucaFrontPage from "@images/UCA_app_web.png"
 import personalFinanceFrontPage from "@images/personal_finance_web.png"
 import weatherWebAppFrontPage from "@images/weather_web_app.png"
+import quizAppWebAppFrontPage from "@images/quiz_app_web.png"
 
 import type { Project } from "@interfaces/interfaces.ts"
 
@@ -31,6 +32,14 @@ const projects: Project[] = [
         href: "https://weather-web-app-delta-five.vercel.app/",
         gitHub: "https://github.com/Barboza13/weather-web-app"
     },
+    {
+        img: quizAppWebAppFrontPage,
+        name: "Aplicación Web",
+        description: "Una aplicación web de cuestionario para responder preguntas y obtener o perder puntos basándose en las respuestas correctas e incorrectas.",
+        technologies: ["Vue.js", "Typescript", "CSS"],
+        href: "https://quiz-app-carlos-barboza.vercel.app/",
+        gitHub: "https://github.com/Barboza13/quiz-app",
+    }
 ]
 ---
 
